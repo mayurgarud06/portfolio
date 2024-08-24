@@ -1,0 +1,142 @@
+/* ProfileSection.css */
+.profile-section {
+    position: sticky;
+    top: 20px;
+    margin: 20px; /* Added margin to create space around the card */
+    width: 300px;
+    background: #282c34;
+    padding: 20px;
+    height: calc(100vh - 80px); /* Adjust height to account for top, bottom, and margin */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Enhanced shadow for a more card-like feel */
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Slightly increased border radius for a softer look */
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+     overflow-y: auto; 
+    /* overflow: hidden; */
+    
+  }
+  
+  .profile-photo-container {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    
+  }
+  
+  .profile-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 30%;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.role {
+  display: block;
+  padding: 3px;
+  margin: 10px 0;
+  background-color: #2d323b;
+  border-radius: 8px;
+  color: #ece6e6;
+  font-weight: bold;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.icon{
+    margin-bottom: -5px;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    justify-content: center;
+}
+/* .contact-icon{
+    margin-bottom: -5px;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    justify-content: center;
+}
+.birthdate-icon{
+    margin-bottom: -5px;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    justify-content: center;
+}
+.location-icon{
+    margin-bottom: -5px;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    justify-content: center;
+} */
+
+
+  .profile-details {
+    text-align: center;
+    color: #f7f4f4;
+    margin-top: -50px;
+    margin-bottom: 20px;
+   
+  }
+  
+  .profile-details h2 {
+    margin-top: 25px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .profile-details p {
+    font-size: 1rem;
+    color: #f7f4f4;
+    margin-bottom: 8px;
+    padding: 8px;
+  }
+  
+  .socialMedia-container {
+    display: flex;
+    justify-content: space-around; /* Or use 'space-between', 'center', etc. based on your preference */
+    align-items: center;
+    gap: 15px; /* Space between icons */
+    margin-bottom: 5px;
+  }
+  
+  .socialMedia {
+    width: 27px;
+    height: 27px;
+    background-color: #282c34; /* Background matching your profile section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Makes the background circular */
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .socialMedia img {
+    width: 24px;
+    height: 24px;
+    background-color:#282c34 ;
+  }
+  
+  .socialMedia:hover {
+    background-color: #444; /* Change background on hover */
+  }
+  
+  
+  .profile-footer {
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #f5f1f1;
+  }
+  
