@@ -7,6 +7,7 @@ import birthdateLogo from './birthdate_logo.png';
 import instagramLogo from './instagram2.png';
 import linkdInLogo from './linkedin-logo.png';
 import githubLogo from './github-logo.png';
+import personLogo from './Testomonies.png';
 
 export default {
   profileLogo,
@@ -16,5 +17,6 @@ export default {
   birthdateLogo,
   instagramLogo,
   linkdInLogo,
-  githubLogo
+  githubLogo,
+  personLogo
 };

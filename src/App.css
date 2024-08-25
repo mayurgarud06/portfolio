@@ -12,7 +12,7 @@ body {
 }
 
 .profile-section {
-  position: fixed;
+  position: sticky;;
   left: 0;
   width: 250px;
   background: #282c34;
@@ -57,6 +57,7 @@ body {
   margin-left: auto;
   margin-right: -19px;
   margin-top: -17px;
+  position: relative;
   background-color: #40454e; /*un-comment to make tabs section having background color */
   z-index: 1;
   border-radius: 10px;
@@ -67,6 +68,7 @@ body {
   color:#ddd;
   border: none;
   padding: 10px 15px;
+  position: inherit;
   cursor: pointer;
   border-radius: 5px;
   align-self: flex-start;
@@ -92,3 +94,96 @@ body {
   flex: 1; /* Take remaining space */
   padding: 20px;
 }
+
+/* media queries */
+/* App.css */
+
+/* For tablets and smaller screens (up to 1024px) */
+@media (max-width: 1024px) {
+  body {
+    transform: scale(0.8);
+    transform-origin: top left;
+    width: 125%;
+  }
+  .app {
+    flex-direction: column; /* Stack profile and main content */
+    height: auto; /* Allow height to grow with content */
+  }
+
+  .profile-section {
+    position: relative;
+    width: 100%;
+    height: auto; /* Allow profile section to grow with content */
+    margin-bottom: 20px; /* Space between profile and main content */
+  }
+
+  .main-content {
+    margin-left: 0; /* Remove margin between profile and main content */
+    height: auto;
+  }
+}
+
+/* For mobile devices (up to 768px) */
+@media (max-width: 768px) {
+  .profile-section {
+    width: 100%; /* Make profile section full width */
+    padding: 15px; /* Reduce padding to fit smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .main-content {
+    padding: 15px; /* Reduce padding */
+  }
+
+  .tabs {
+    flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
+    flex-direction: column;
+    justify-content: center; /* Center align tabs */
+    gap: 5px; /* Reduce gap between tabs for smaller screens */
+    margin: 10px 0; /* Adjust margin to fit the screen better */
+    width: 100%; /* Make tabs take full width */
+  }
+
+  .tabs button {
+    flex-grow: 1; /* Allow buttons to grow evenly on smaller screens */
+    padding: 8px 12px; /* Adjust padding for smaller buttons */
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .content {
+    margin-top: 0; /* Remove top margin for better spacing */
+    margin-left: 0;
+  }
+}
+
+/* For small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+  .profile-section {
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .profile-photo {
+    width: 100px; /* Reduce profile photo size */
+    height: 100px;
+  }
+
+  .tabs {
+    flex-direction: column; /* Stack tabs vertically */
+    align-items: center; /* Center align vertically stacked tabs */
+    gap: 10px; /* Space between vertically stacked tabs */
+    margin: 10px 0; /* Adjust margin */
+  }
+
+  .tabs button {
+    width: 100%; /* Make tabs take full width on small devices */
+    margin-bottom: 5px; /* Space between buttons */
+  }
+  .main-content {
+    padding: 10px; /* Reduce padding for small screens */
+  }
+
+  .content {
+    padding: 15px; /* Adjust padding for content area */
+  }
+}
+

@@ -5,16 +5,17 @@
     margin: 20px; /* Added margin to create space around the card */
     width: 300px;
     background: #282c34;
-    padding: 20px;
-    height: calc(100vh - 80px); /* Adjust height to account for top, bottom, and margin */
+    /* padding: 20px; */
+    height: calc(100vh - 10vh); /* Adjust height to account for top, bottom, and margin */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Enhanced shadow for a more card-like feel */
     border: 1px solid #ddd;
     border-radius: 12px; /* Slightly increased border radius for a softer look */
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
+    position: relative;
     align-items: center;
-     overflow-y: auto; 
+    overflow-y: auto;  
     /* overflow: hidden; */
     
   }
@@ -139,4 +140,13 @@
     font-size: 0.9rem;
     color: #f5f1f1;
   }
+
+  @media (max-width: 768px) {
+    .profile-section {
+        width: 100%;
+        margin: 10px 0; /* Adjust margin for smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+        position: relative; /* Remove sticky positioning */
+    }
+}
   

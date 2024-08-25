@@ -1,0 +1,75 @@
+/* About.css */
+.about-container {
+    padding: 20px;
+  }
+  
+  .about-divider {
+    border: none; /* Remove default styling */
+    border-top: 2px solid #ddd; /* Line style and color */
+    margin: 10px 0; /* Space around the line */
+    width: 50%; /* Adjust width for a smaller line */
+    align-self: flex-start; /* Aligns the line to the start of its container */
+  }
+  
+  .testimonial-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 10px; /* Adjust padding as needed */
+  }
+  
+  .testimonial-card-container > * {
+    flex: 1 1 calc(33.333% - 20px); /* 3 cards in a row */
+    margin: 10px;
+    box-sizing: border-box;
+    background: #282c34;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  
+  /* Hover Effect */
+  .testimonial-card-container > *:hover {
+    transform: translateY(-10px) scale(1.05);
+    /*Slightupwardmovementwithscaling*/box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /*Increasedshadowonhover*/animation: hoverEffect 0.1s ease-in-out;
+    /*Applyanimation*/opacity: 1;
+     /* Full opacity on hover */ 
+  
+}
+  
+  /* Hover Animation */
+  @keyframes hoverEffect {
+    0% {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+    100% {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  /* For medium screens */
+  @media (max-width: 1024px) {
+    .testimonial-card-container > * {
+      flex: 1 1 calc(50% - 20px); /* 2 cards in a row */
+    }
+  }
+  
+  /* For small screens */
+  @media (max-width: 600px) {
+    .testimonial-card-container > * {
+      flex: 1 1 100%; /* 1 card per row */
+    }
+  }
+  
+  

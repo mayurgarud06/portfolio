@@ -1,7 +1,7 @@
 // ProfileSection.js
 import React from 'react';
-import './ProfileSection.css';
-import Images from './static/Images';
+import './css/ProfileSection.css';
+import Images from '../static/Images';
 const ProfileSection = () => {
   return (
     <div className="profile-section">

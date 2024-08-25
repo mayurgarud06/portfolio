@@ -1,12 +1,12 @@
 // App.js
 import React, { useState } from 'react';
 import './App.css';
-import About from './About';
-import Projects from './Projects';
-import Blog from './Blog';
-import ProfileSection from './ProfileSection'; // Import the ProfileSection component
-import Resume from './Resume';
-import Contact from './Contact';
+import About from './Components/About';
+import Projects from './Components/Projects';
+import Blog from './Components/Blog';
+import ProfileSection from './Components/ProfileSection'; // Import the ProfileSection component
+import Resume from './Components/Resume';
+import Contact from './Components/Contact';
 
 const App = () => {
   const [currentTab, setCurrentTab] = useState('about');
