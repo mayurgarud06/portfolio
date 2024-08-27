@@ -7,6 +7,8 @@ import Blog from './Components/Blog';
 import ProfileSection from './Components/ProfileSection'; // Import the ProfileSection component
 import Resume from './Components/Resume';
 import Contact from './Components/Contact';
+import 'leaflet/dist/leaflet.css';
+
 
 const App = () => {
   const [currentTab, setCurrentTab] = useState('about');

@@ -18,5 +18,5 @@ export default {
   instagramLogo,
   linkdInLogo,
   githubLogo,
-  personLogo
+  personLogo,
 };

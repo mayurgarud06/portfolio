@@ -1,12 +1,26 @@
 /* Contact.css */
+
+
 .contact-card {
-  max-width: 500px;
-  margin: 100px ;
-  padding: 20px;
+  max-width: 800px;
+  margin: auto ;
+  padding: 10px;
   border-radius: 8px;
   background: #616060;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100vh;
+  width: 800px;
+  justify-self: center;
+}
+.map-container {
+  height: 500px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.leaflet-container {
+  height: 100% !important; /* Important to override internal styles */
+  width: 100% !important;
 }
 
 .contact-card h2 {
@@ -54,3 +68,7 @@
 .submit-button:hover {
   background-color: #0056b3;
 }
+.button-container{
+ text-align: right;
+}
+

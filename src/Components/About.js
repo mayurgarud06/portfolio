@@ -32,7 +32,7 @@ drive results
       We can do that by adding a number of suffix. Such as lorem 29 to generate 29 words of diamond. Text...."
     </p>
     <h1> Testomonies ...</h1>
-    <div class="testimonial-card-container">
+    <div className="testimonial-card-container">
     <TestimonialCard
           name="John Doe"
           details="Software Engineer at xyz"

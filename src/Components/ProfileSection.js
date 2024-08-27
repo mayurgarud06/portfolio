@@ -14,7 +14,10 @@ const ProfileSection = () => {
       </div>
       <div className="profile-details">
         <h2>Mayur Garud</h2>
-        <p class="role">Java Developer</p>
+        <div className="role">
+        <p >Software Engineer</p>
+        <p>Java developer | Python</p>
+        </div>
         <hr/>
         <p><img
           src={Images.mailLogo}

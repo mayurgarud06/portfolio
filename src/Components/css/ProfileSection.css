@@ -15,9 +15,9 @@
     justify-content:space-evenly;
     position: relative;
     align-items: center;
-    overflow-y: auto;  
-    /* overflow: hidden; */
-    
+    /* overflow-y: auto;  */
+    overflow: hidden;
+    max-height: fit-content;
   }
   
   .profile-photo-container {
@@ -39,7 +39,7 @@
 .role {
   display: block;
   padding: 3px;
-  margin: 10px 0;
+  margin: 5px 0;
   background-color: #2d323b;
   border-radius: 8px;
   color: #ece6e6;
@@ -57,34 +57,11 @@
     margin-right: 10px;
     justify-content: center;
 }
-/* .contact-icon{
-    margin-bottom: -5px;
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-    justify-content: center;
-}
-.birthdate-icon{
-    margin-bottom: -5px;
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-    justify-content: center;
-}
-.location-icon{
-    margin-bottom: -5px;
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-    justify-content: center;
-} */
-
-
   .profile-details {
     text-align: center;
     color: #f7f4f4;
     margin-top: -50px;
-    margin-bottom: 20px;
+    margin-bottom: 2px;
    
   }
   
@@ -97,7 +74,6 @@
   .profile-details p {
     font-size: 1rem;
     color: #f7f4f4;
-    margin-bottom: 8px;
     padding: 8px;
   }
   
@@ -110,8 +86,8 @@
   }
   
   .socialMedia {
-    width: 27px;
-    height: 27px;
+    width: 50px;
+    height: 50px;
     background-color: #282c34; /* Background matching your profile section */
     display: flex;
     align-items: center;
@@ -122,8 +98,8 @@
   }
   
   .socialMedia img {
-    width: 24px;
-    height: 24px;
+    width: 35px;
+    height: 35px;
     background-color:#282c34 ;
   }
   
@@ -131,16 +107,19 @@
     background-color: #444; /* Change background on hover */
   }
   
-  
   .profile-footer {
     width: 100%;
-    padding-top: 20px;
+    padding-top: 10px;
     border-top: 1px solid #ddd;
     text-align: center;
     font-size: 0.9rem;
     color: #f5f1f1;
   }
-
+  .role p {
+    margin: 0; /* Remove the default margin */
+    padding: 5px 0; /* Add custom padding if needed */
+    line-height: 1.4; /* Adjust line height for spacing between lines */
+  }
   @media (max-width: 768px) {
     .profile-section {
         width: 100%;

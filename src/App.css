@@ -1,4 +1,7 @@
 /* App.css */
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -17,12 +20,12 @@ body {
   width: 250px;
   background: #282c34;
   padding: 20px;
-  height: 100vh;
+  height: 500px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .main-content {
@@ -32,7 +35,15 @@ body {
   color: #f7f4f4;
   background: #020202;
   height: 100vh;
+  min-height: 100vh;
+  width: 100%; /* Ensure full width */
+  min-width: 600px; /* Set a minimum width */
+  min-height: 100vh; /* Ensure it doesn't shrink below the viewport height */
+  flex-grow: 1;
+  flex-shrink: 0;
   overflow-y: auto;
+  display: inline-block;
+  justify-content: center;
 }
 
 .tab-content {
@@ -44,7 +55,9 @@ body {
   background: #282c34;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  min-height: auto; /*Adjust as needed */
+  min-height: 100vh; /*Adjust as needed */
+  min-width: 600px;
+  width:100%;
   z-index: 1;
 }
 
