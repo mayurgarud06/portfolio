@@ -29,17 +29,17 @@ body {
 }
 
 .main-content {
-  margin-left: 5px; /* Reduced space between profile and main content */
-  padding: 20px;
+  margin-left: 5px;
+  /*Reducedspacebetweenprofileandmaincontent*/padding: 20px;
   flex: 1;
   color: #f7f4f4;
   background: #020202;
   height: 100vh;
   min-height: 100vh;
-  width: 100%; /* Ensure full width */
-  min-width: 600px; /* Set a minimum width */
-  min-height: 100vh; /* Ensure it doesn't shrink below the viewport height */
-  flex-grow: 1;
+  width: 100%;
+  /*Ensurefullwidth*/min-width: 600px;
+  /*Setaminimumwidth*/min-height: 100vh;
+  /*Ensureitdoesn'tshrinkbelowtheviewportheight*/flex-grow: 1;
   flex-shrink: 0;
   overflow-y: auto;
   display: inline-block;
@@ -53,9 +53,9 @@ body {
   padding: 20px;
   border: 1px solid #ddd;
   background: #282c34;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  min-height: 100vh; /*Adjust as needed */
+  min-height: 100vh;/*Adjustasneeded*/
   min-width: 600px;
   width:100%;
   z-index: 1;
