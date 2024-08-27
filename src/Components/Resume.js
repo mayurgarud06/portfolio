@@ -1,6 +1,7 @@
 // Projects.js
 import React from 'react';
 import "./css/Resume.css";
+import Images from '../static/Images.js';
 
 const Resume = () =>{
   
@@ -37,11 +38,25 @@ const Resume = () =>{
         Download Resume
       </button>
     <h1> Skills...</h1>
-    <p>
-    "...And then press enter.
-     We can also control how much text is generated.
-      We can do that by adding a number of suffix. Such as lorem 29 to generate 29 words of diamond. Text...."
-    </p>
+   <div className='skill_container'>
+    <div className='skills'>
+      <div className="skill-item"><img src={Images.Java}/><p>Java</p></div>
+      <div className="skill-item"><img src={Images.python}/><p>Python</p></div>
+      <div className="skill-item"><img src={Images.Mysql}/><p>MySQL</p></div>
+      <div className="skill-item"><img src={Images.reactLogo}/><p>React.JS</p></div>
+      <div className="skill-item"><img src={Images.springboot}/><p>Spring Boot</p></div>
+      <div className="skill-item"><img src={Images.git}/><p>GIT</p></div>
+      <div className="skill-item"><img src={Images.github}/><p>GitHub</p></div>
+      <div className="skill-item"><img src={Images.JavaScript}/><p>JavaScript</p></div>
+      <div className="skill-item"><img src={Images.html}/><p>HTML</p></div>
+      <div className="skill-item"><img src={Images.gcp}/><p>Google Cloud Platform</p></div>
+      <div className="skill-item"><img src={Images.docker}/><p>Docker Container</p></div>
+      <div className="skill-item"> <img src={Images.api}/><p>Rest API</p></div>
+      <div className="skill-item"><img src={Images.swagger}/><p>swagger Documentation API</p></div>
+      <div className="skill-item"><img src={Images.postman}/><p>Postman API</p></div>
+    </div>   
+    </div>
+    
   </div>
 );
 };

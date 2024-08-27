@@ -69,6 +69,7 @@
   background-color: #4CAF50;
   color: white;
   padding: 15px 30px;
+  margin:20px;
   font-size: 18px;
   border: none;
   border-radius: 8px;
@@ -78,4 +79,66 @@
 
 .download-button:hover {
   background-color: #45a049;
+}
+
+/* skills section css */
+.skill_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  background-color: #373c47; 
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Space between each skill item */
+  max-width: 1200px; /* Limits the maximum width */
+}
+
+.skills div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px; /* Fixed width for consistent alignment */
+  height: 150px; /* Fixed height for consistent alignment */
+  background-color: #525968; /* Background color for each skill box */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-size: 16px; /* Font size for the text */
+  font-weight: bold;
+  color: #ccc; /* Text color */
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills div:hover {
+  transform: translateY(-10px); /* Slight movement on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column; /* Stack the image and the label vertically */
+  align-items: center; /* Center the items horizontally */
+  justify-content: center; /* Center the items vertically */
+  text-align: center; /* Center the text within the <p> element */
+  padding: 10px;
+}
+
+.skill-item img {
+  width: 80px;  /* Adjust size as needed */
+  height: 80px; /* Adjust size as needed */
+  margin-bottom: 10px; /* Space between the image and the label */
+  display: block;
+  margin: 0 auto; /* Center the image */
+  image-rendering: auto;
+}
+
+.skill-item p {
+  margin: 0;
+  font-size: 14px; /* Adjust font size as needed */
+  color: #ccc;     /* Change text color if needed */
 }
