@@ -35,9 +35,9 @@
   /* Hover Effect */
   .testimonial-card-container > *:hover {
     transform: translateY(-10px) scale(1.05);
-    /*Slightupwardmovementwithscaling*/box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    /*Increasedshadowonhover*/animation: hoverEffect 0.1s ease-in-out;
-    /*Applyanimation*/opacity: 1;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: hoverEffect 0.1s ease-in-out;
+   opacity: 1;
      /* Full opacity on hover */ 
   
 }

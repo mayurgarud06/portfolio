@@ -1,6 +1,4 @@
 /* Contact.css */
-
-
 .contact-card {
   max-width: 800px;
   margin: auto ;
@@ -68,6 +66,7 @@
 .submit-button:hover {
   background-color: #0056b3;
 }
+
 .button-container{
  text-align: right;
 }
@@ -79,7 +78,7 @@
   margin: 5px 0;
   font-size: 0.9rem;
   color: #666; /* Color for the text */
-}  */
+} 
 
 
 .popup-content {
@@ -115,7 +114,6 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background: rgba(0, 0, 0, 0.5);
-  /*Semi-transparentbackground*/
   display: flex;
   justify-content: center;
   align-items: center;
