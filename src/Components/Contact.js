@@ -57,6 +57,7 @@ const Contact = () => {
   return (
      <div className='contact-container'>
       <h2>Contact Me</h2>
+      <hr className="contact-divider" />
       <div className="map-container">
         <MapContainer center={[18.50314364853892, 73.93763377747143]} zoom={13} scrollWheelZoom={false}>
           <TileLayer
@@ -67,7 +68,7 @@ const Contact = () => {
           <Marker position={[18.50314364853892, 73.93763377747143]} icon={markerIcon}>
           <Popup className="popup-content">
               <div className="popup-info">
-                <h3>Hadapsar,Pune</h3>
+                <h3>Hadapsar, Pune</h3>
                 <p>Latitude: 18.5031</p>
                 <p>Longitude: 73.9376</p>
               </div>

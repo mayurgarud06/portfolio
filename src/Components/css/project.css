@@ -1,0 +1,8 @@
+
+.project-divider {
+    border: none;/*Removedefaultstyling*/
+    border-top: 5px solid #FAB005;/*Linestyleandcolor*/
+    margin: 10px 0;/*Spacearoundtheline*/
+    width: 120px;/*Adjustwidthforasmallerline*/
+    align-self: flex-start;/*Alignsthelinetothestartofitscontainer*/
+  }

@@ -1,13 +1,13 @@
 // Projects.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./css/Resume.css";
 import Images from '../static/Images.js';
 
 const Resume = () =>{
   
    const resumeLink ="https://docs.google.com/document/d/1kZ-Tvl1qvZ9unx0JX91519-Zsc3kNlGFLmZJomGKupg/pub?embedded=true";
-  const downloadLink="https://docs.google.com/document/d/1kZ-Tvl1qvZ9unx0JX91519-Zsc3kNlGFLmZJomGKupg/export?format=pdf";
- 
+   const downloadLink="https://docs.google.com/document/d/1kZ-Tvl1qvZ9unx0JX91519-Zsc3kNlGFLmZJomGKupg/export?format=pdf";
+  
   const handleDownload = () => {
     // Trigger download
     const link = document.createElement('a');

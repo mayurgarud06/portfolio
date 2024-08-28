@@ -9,6 +9,13 @@
   width: 800px;
   justify-self: center;
 }
+.contact-divider{
+  border: none;/*Removedefaultstyling*/
+  border-top: 5px solid #FAB005;/*Linestyleandcolor*/
+  margin: 10px 0;/*Spacearoundtheline*/
+  width: 130px;/*Adjustwidthforasmallerline*/
+  align-self: flex-start;/*Alignsthelinetothestartofitscontainer*/
+}
 .map-container {
   height: 500px;
   width: 100%;

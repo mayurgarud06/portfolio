@@ -24,6 +24,7 @@ import springboot from './png/springboot.png';
 import docker from './png/docker.png';
 import swagger from './png/swagger.png';
 import postman from './png/postman.png';
+import workInProgress from './working.webp';
 
 export default {
   profileLogo,
@@ -50,5 +51,6 @@ export default {
   springboot,
   docker,
   swagger,
-  postman
+  postman,
+  workInProgress
 };
