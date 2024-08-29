@@ -181,7 +181,7 @@ body {
   }
 
   .tabs {
-    flex-direction: column; /* Stack tabs vertically */
+    flex-direction: row; /* Stack tabs vertically */
     align-items: center; /* Center align vertically stacked tabs */
     gap: 10px; /* Space between vertically stacked tabs */
     margin: 10px 0; /* Adjust margin */
@@ -196,7 +196,7 @@ body {
   }
 
   .content {
-    padding: 15px; /* Adjust padding for content area */
+    padding: 160px; /* Adjust padding for content area */
   }
 }
 
