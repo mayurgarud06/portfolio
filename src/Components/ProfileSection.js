@@ -57,8 +57,14 @@ const ProfileSection = () => {
           </a>
           <a href="https://github.com/mayurgarud06" target="_blank" rel="noopener noreferrer">
         <img
-          src={Images.githubLogo}
+          src={Images.github}
           alt="github"
+          className="socialMedia"/>
+         </a>
+         <a href="https://www.cloudskillsboost.google/public_profiles/71bd47c8-57b8-44f8-a3cc-fa768165bf04" target="_blank" rel="noopener noreferrer">
+        <img
+          src={Images.googlecloudLogo}
+          alt="google Cloud"
           className="socialMedia"/>
          </a>
       </div>

@@ -1,3 +1,6 @@
+.project-content {
+  padding: 20px;
+}
 
 .project-divider {
     border: none;/*Removedefaultstyling*/
@@ -5,4 +8,36 @@
     margin: 10px 0;/*Spacearoundtheline*/
     width: 120px;/*Adjustwidthforasmallerline*/
     align-self: flex-start;/*Alignsthelinetothestartofitscontainer*/
+  }
+  .cards-container {
+    display: flex;
+    background-color: #373c47;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    gap: 20px; /* Spacing between cards */
+    justify-content: center; /* Center align the cards horizontally */
+  }
+  
+  .card {
+    flex: 1 1 calc(25% - 20px); /* Adjust the size of the cards and space between them */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+  }
+  
+  @media (max-width: 1200px) {
+    .card {
+      flex: 1 1 calc(33.333% - 20px); /* Adjust for medium screens */
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .card {
+      flex: 1 1 calc(50% - 20px); /* Adjust for small screens */
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .card {
+      flex: 1 1 100%; /* Full width for extra small screens */
+    }
   }

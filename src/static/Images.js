@@ -4,8 +4,8 @@ import contactLogo from './contact.svg';
 import locationLogo from './location.png';
 import mailLogo from './mail_logo.png';
 import birthdateLogo from './birthdate_logo.png';
-import instagramLogo from './instagram2.png';
-import linkdInLogo from './linkedin-logo.png';
+import instagramLogo from './instagram.png';
+import linkdInLogo from './linkedin.png';
 import githubLogo from './github-logo.png';
 import personLogo from './Testomonies.png';
 import locationPin from './location_pin.png';
@@ -25,6 +25,7 @@ import docker from './png/docker.png';
 import swagger from './png/swagger.png';
 import postman from './png/postman.png';
 import workInProgress from './working.webp';
+import googlecloudLogo from './googlecloud.png';
 
 export default {
   profileLogo,
@@ -52,5 +53,6 @@ export default {
   docker,
   swagger,
   postman,
-  workInProgress
+  workInProgress,
+  googlecloudLogo
 };

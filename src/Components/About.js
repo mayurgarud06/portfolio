@@ -14,22 +14,24 @@ overall software development life cycle involving requirement analysis,
 system study, designing, architecture, testing, programming, coding, debugging, defect management & documentation
  Skilled in designing customized IT products for high profile clients;
  </p>
-<p>capability to interface with clients, suggest viable software solutions and cultivate 
-relations with them for securing repeat business</p>
+<p>"capability to interface with clients, suggest viable software solutions and cultivate 
+relations with them for securing repeat business."</p>
 
-<p>Hands-on experience in analyzing information system needs, evaluating enduser requirements, custom designing solutions and troubleshooting for 
-complex information systems management
+<p>"Hands-on experience in analyzing information system needs, evaluating enduser requirements, custom designing solutions and troubleshooting for 
+complex information systems management."
 </p>
 <p>
-Proficient in modern development tools, cloud technologies, and database
+"Proficient in modern development tools, cloud technologies, and database
 management, committed to delivering high-quality software solutions that 
-drive results
+drive results."
 </p>
     <h1> what I am Doing ...</h1>
     <p>
-    "...And then press enter.
-     We can also control how much text is generated.
-      We can do that by adding a number of suffix. Such as lorem 29 to generate 29 words of diamond. Text...."
+    "With 2 years of professional experience as a backend developer specializing in Java, 
+    I am now expanding my expertise by focusing on frontend technologies, particularly ReactJS. 
+    This transition is part of my journey to becoming a well-rounded full-stack developer, 
+    enabling me to deliver complete solutions that seamlessly integrate both
+    backend and frontend functionalities."
     </p>
     <h1> Testomonies ...</h1>
     <div className="testimonial-card-container">

@@ -89,7 +89,7 @@
     width: 50px;
     height: 50px;
     /* background-color: #282c34; Background matching your profile section  ; */
-    background-color: #2d323b;
+    background-color: #424852;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,7 +105,7 @@
   }
   
   .socialMedia:hover {
-    background-color: #877d7d; /* Change background on hover */
+    background-color: #8294a7; /* Change background on hover */
   }
   
   .profile-footer {
