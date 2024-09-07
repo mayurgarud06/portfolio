@@ -16,53 +16,54 @@ import 'leaflet/dist/leaflet.css';
 
 const App = () => {
   
-const initialBlogs = [
-  {
-    id: 1,
-    title: "First Blog Post",
-    description: "An insightful post on web development trends.",
-    content: <FirstBlog/>,
-    image: blogImage.Blog,
-  },
-  {
-    id: 2,
-    title: "Second Blog Post",
-    description: "Exploring the latest in frontend technologies.",
-    // content: `<p>This is the detailed content of the second blog post.</p>`,
-    content:<Working/>,
-    image: blogImage.Blog,
-  },
-  {
-    id: 3,
-    title: "Third Blog Post",
-    description: "Exploring the latest in frontend technologies.",
-    // content: `<p>This is the detailed content of the second blog post.</p>`,
-    content: <Working/>,
-    image: blogImage.Blog,
-  },
-  {
-    id: 4,
-    title: "Fourth Blog Post",
-    description: "Exploring the latest in Backtend technologies.",
-    // content: `<p>This is the detailed content of the second blog post.</p>`,
-    content: <Working/>,
-    image: blogImage.Blog,
-  },
-  {
-    id: 5,
-    title: "fifth Blog Post",
-    description: "Exploring the latest in Backtend technologies.",
-    // content: `<p>This is the detailed content of the second blog post.</p>`,
-    content: <Working/>,
-    image: blogImage.Blog,
-  }
-  // Add more blogs here
-];
-  const [blogs, setBlogs] = useState(initialBlogs); // Add state for blogs
+// const initialBlogs = [
+//   {
+//     id: 1,
+//     title: "First Blog Post",
+//     description: "An insightful post on web development trends.",
+//        // content: `<p>This is the detailed content of the second blog post.</p>`,
+//     content: <FirstBlog/>,
+//     image: blogImage.Blog,
+//   },
+//   {
+//     id: 2,
+//     title: "Second Blog Post",
+//     description: "Exploring the latest in frontend technologies.",
+//     // content: `<p>This is the detailed content of the second blog post.</p>`,
+//     content:<Working/>,
+//     image: blogImage.Blog,
+//   },
+//   {
+//     id: 3,
+//     title: "Third Blog Post",
+//     description: "Exploring the latest in frontend technologies.",
+//     // content: `<p>This is the detailed content of the second blog post.</p>`,
+//     content: <Working/>,
+//     image: blogImage.Blog,
+//   },
+//   {
+//     id: 4,
+//     title: "Fourth Blog Post",
+//     description: "Exploring the latest in Backtend technologies.",
+//     // content: `<p>This is the detailed content of the second blog post.</p>`,
+//     content: <Working/>,
+//     image: blogImage.Blog,
+//   },
+//   {
+//     id: 5,
+//     title: "fifth Blog Post",
+//     description: "Exploring the latest in Backtend technologies.",
+//     // content: `<p>This is the detailed content of the second blog post.</p>`,
+//     content: <Working/>,
+//     image: blogImage.Blog,
+//   }
+//   // Add more blogs here
+// ];
+//   const [blogs, setBlogs] = useState(initialBlogs); // Add state for blogs
 
-  const addBlog = (newBlog) => {
-    setBlogs((prevBlogs) => [...prevBlogs, newBlog]);
-  };
+//   const addBlog = (newBlog) => {
+//     setBlogs((prevBlogs) => [...prevBlogs, newBlog]);
+//   };
   return (
     <Router>
       <div className="app">
@@ -103,12 +104,13 @@ const initialBlogs = [
             </div>
             <div className="content">
               <Routes>
+                <Route path="/portfolio" element={<About />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/resume" element={<Resume />} />
                 <Route path="/projects" element={<Projects />} />
-                <Route path="/blog" element={<Blog blogs={blogs} addBlog={addBlog}/>} />
+                <Route path="/blog" element={<Blog/>} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/add-blog" element={<AddBlog addBlog={addBlog} />} /> {/* Route for AddBlog */}
+                <Route path="/add-blog" element={<AddBlog/>} /> {/* Route for AddBlog */}
                 <Route path="/" element={<About />} /> {/* Default route */}
                 {/* <Route path="/firstBlog" element={<FirstBlog/>} /> Default route */}
               </Routes>

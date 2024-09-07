@@ -1,16 +1,33 @@
 // Blog.js
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './css/blog.css';
 import './css/AddBlog.css';
-
 import Card from './Card';
 import { Link } from 'react-router-dom';
 import blogImage from '../static/blogImages';
+// import { db } from '../firebase'; // Assuming firebase.js is correctly configured
+import { collection, getDocs ,db} from './Config/firebaseConfig';
 
 
-const Blog = ({ blogs, addBlog }) => {
+const Blog = () => {
+  const [blogs, setBlogs] = useState([]);
   const [selectedBlog, setSelectedBlog] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    // Fetch blogs from Firestore
+    const fetchBlogs = async () => {
+      const blogCollection = collection(db, 'blogs');
+      const blogSnapshot = await getDocs(blogCollection);
+      const blogList = blogSnapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setBlogs(blogList);
+    };
+
+    fetchBlogs();
+  }, []);
 
   const handleReadBlog = (index) => {
     setSelectedBlog(blogs[index]);
@@ -39,7 +56,7 @@ const Blog = ({ blogs, addBlog }) => {
   return (
     <div className="blog-content">
       <h1>Blog</h1>
-      <hr className="blog-divider" />
+      <hr className="blog-divider"/>
       <Link to="/add-blog" className="add-blog-button">
         Add New Blog
       </Link>
@@ -47,8 +64,8 @@ const Blog = ({ blogs, addBlog }) => {
         // Render the selected blog content
         <div className="blog-details">
           <h2>{selectedBlog.title}</h2>
-          {/* <div dangerouslySetInnerHTML={{ __html: selectedBlog.content }} /> */}
-          {selectedBlog.content} 
+          <div dangerouslySetInnerHTML={{ __html: selectedBlog.content }} />
+          {/* {selectedBlog.content}  */}
           <div className="button-container">
             <button onClick={handleBackToBlogs} className="back-button">
               Back to Blogs
