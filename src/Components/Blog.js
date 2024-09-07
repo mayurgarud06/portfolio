@@ -47,8 +47,8 @@ const Blog = ({ blogs, addBlog }) => {
         // Render the selected blog content
         <div className="blog-details">
           <h2>{selectedBlog.title}</h2>
-          <div dangerouslySetInnerHTML={{ __html: selectedBlog.content }} />
-          {/* {selectedBlog.content}  */}
+          {/* <div dangerouslySetInnerHTML={{ __html: selectedBlog.content }} /> */}
+          {selectedBlog.content} 
           <div className="button-container">
             <button onClick={handleBackToBlogs} className="back-button">
               Back to Blogs

@@ -11,6 +11,7 @@ import Contact from './Components/Contact';
 import AddBlog from './Components/AddBlog';
 import blogImage from './static/blogImages.js';
 import FirstBlog from './blogs/FirstBlog.js';
+import Working from './Components/working.js';
 import 'leaflet/dist/leaflet.css';
 
 const App = () => {
@@ -20,40 +21,39 @@ const initialBlogs = [
     id: 1,
     title: "First Blog Post",
     description: "An insightful post on web development trends.",
-    content: `<p>This is the detailed content of the first blog post.</p>`,
-    // content: <FirstBlog/>,
+    content: <FirstBlog/>,
     image: blogImage.Blog,
   },
   {
     id: 2,
     title: "Second Blog Post",
     description: "Exploring the latest in frontend technologies.",
-    content: `<p>This is the detailed content of the second blog post.</p>`,
-    // content: <FirstBlog/>,
+    // content: `<p>This is the detailed content of the second blog post.</p>`,
+    content:<Working/>,
     image: blogImage.Blog,
   },
   {
     id: 3,
     title: "Third Blog Post",
     description: "Exploring the latest in frontend technologies.",
-    content: `<p>This is the detailed content of the second blog post.</p>`,
-    // content: <FirstBlog/>,
+    // content: `<p>This is the detailed content of the second blog post.</p>`,
+    content: <Working/>,
     image: blogImage.Blog,
   },
   {
     id: 4,
     title: "Fourth Blog Post",
     description: "Exploring the latest in Backtend technologies.",
-    content: `<p>This is the detailed content of the second blog post.</p>`,
-    // content: <FirstBlog/>,
+    // content: `<p>This is the detailed content of the second blog post.</p>`,
+    content: <Working/>,
     image: blogImage.Blog,
   },
   {
     id: 5,
     title: "fifth Blog Post",
     description: "Exploring the latest in Backtend technologies.",
-    content: `<p>This is the detailed content of the second blog post.</p>`,
-    // content: <FirstBlog/>,
+    // content: `<p>This is the detailed content of the second blog post.</p>`,
+    content: <Working/>,
     image: blogImage.Blog,
   }
   // Add more blogs here
