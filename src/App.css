@@ -1,126 +1,118 @@
-/* App.css */
+/* Global Styles */
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
   background-color: #020202; /* Match the background color of the profile section */
+  color: #f7f4f4; /* Default text color */
+  font-family: Arial, sans-serif; /* Set a default font */
 }
 
+/* App Container */
 .app {
   display: flex;
   background: #020202;
-  height: 100vh;
+  min-height: 100vh; /* Ensure the app covers the full viewport height */
 }
 
+/* Profile Section */
 .profile-section {
-  position: sticky;;
+  position: sticky;
   left: 0;
   width: 250px;
   background: #282c34;
   padding: 20px;
-  height: 500px;
+  height: 100vh;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
+/* Main Content */
 .main-content {
   margin-left: 5px;
-  /*Reducedspacebetweenprofileandmaincontent*/padding: 20px;
+  padding: 20px;
   flex: 1;
-  color: #f7f4f4;
   background: #020202;
-  height: 100vh;
-  min-height: 100vh;
-  width: 100%;
-  /*Ensurefullwidth*/min-width: 600px;
-  /*Setaminimumwidth*/min-height: 100vh;
-  /*Ensureitdoesn'tshrinkbelowtheviewportheight*/flex-grow: 1;
-  flex-shrink: 0;
+  min-width: 600px; /* Set a minimum width for larger screens */
   overflow-y: auto;
-  display: inline-block;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
+/* Tab Content */
 .tab-content {
-  display: inline-flex;
-  justify-content: flex-end;
+  display: flex;
   flex-direction: column;
   padding: 20px;
   border: 1px solid #ddd;
   background: #282c34;
   border-radius: 12px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  min-height: 100vh;/*Adjustasneeded*/
-  min-width: 600px;
-  width:100%;
-  z-index: 1;
+  min-height: 100vh;
 }
 
+/* Tabs Navigation */
 .tabs {
   display: inline-flex; /* Align tabs in a row */
-  justify-content: flex-end;/* Align tabs to the right */
+  justify-content: flex-end; /* Align tabs to the right */
   gap: 10px; /* Space between tabs */
-  height: 40px;
+  height: 45px;
   margin-bottom: 20px; /* Space between tabs and content */
-  margin-left: auto;
-  margin-right: -19px;
-  margin-top: -17px;
-  position: relative;
-  background-color: #40454e; /*un-comment to make tabs section having background color */
-  z-index: 1;
+  padding: 5px; /* Add padding inside the tabs container */
+  background-color: #40454e; /* Optional background for tabs */
   border-radius: 10px;
+  flex-wrap: wrap; /* Allow wrapping to prevent overflow */
+  width: fit-content; /* Fit tabs content */
+  margin-left: auto; /* Push tabs container to the right */
+  z-index: 1;
 }
 
-.tabs button {
+.tabs a {
   background-color: #40454e;
-  color:#ddd;
+  color: #ddd;
   border: none;
   padding: 10px 15px;
-  position: inherit;
   cursor: pointer;
   border-radius: 5px;
-  align-self: flex-start;
   transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap; /* Prevent the text from wrapping */
 }
 
-.tabs button.active {
-  /* background-color: #bbb;#1826c0fe; */
+.tabs a.active {
   color: #FAB005;
-  text-decoration: solid;
   font-weight: bold;
 }
 
-.tabs button:hover {
+.tabs a:hover {
   background-color: #ccc;
-  color:black;
+  color: black;
 }
 
+/* Content Area */
 .content {
-  z-index: 0;
-  margin-top: -80px;
-  margin-left: 10px;
+  margin-top: -70px;
   flex: 1; /* Take remaining space */
   padding: 20px;
+  background: #282c34;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
 }
 
-/* media queries */
-/* App.css */
-
+/* Media Queries */
 /* For tablets and smaller screens (up to 1024px) */
 @media (max-width: 1024px) {
-  body {
-    transform: scale(0.8);
-    transform-origin: top left;
-    width: 125%;
-  }
   .app {
     flex-direction: column; /* Stack profile and main content */
-    height: auto; /* Allow height to grow with content */
   }
 
   .profile-section {
@@ -132,40 +124,31 @@ body {
 
   .main-content {
     margin-left: 0; /* Remove margin between profile and main content */
-    height: auto;
+    min-width: auto; /* Remove min-width for smaller screens */
+  }
+
+  .tab-content {
+    min-height: auto; /* Adjust min-height for smaller screens */
   }
 }
 
 /* For mobile devices (up to 768px) */
 @media (max-width: 768px) {
-  .profile-section {
-    width: 100%; /* Make profile section full width */
-    padding: 15px; /* Reduce padding to fit smaller screens */
-    margin-bottom: 20px;
-  }
-
-  .main-content {
-    padding: 15px; /* Reduce padding */
-  }
-
   .tabs {
     flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
-    flex-direction: column;
     justify-content: center; /* Center align tabs */
-    gap: 5px; /* Reduce gap between tabs for smaller screens */
-    margin: 10px 0; /* Adjust margin to fit the screen better */
-    width: 100%; /* Make tabs take full width */
+    gap: 5px; /* Reduce gap between tabs */
+    padding: 10px; /* Adjust padding */
   }
 
-  .tabs button {
-    flex-grow: 1; /* Allow buttons to grow evenly on smaller screens */
-    padding: 8px 12px; /* Adjust padding for smaller buttons */
+  .tabs a {
+    flex-grow: 1; /* Allow tabs to grow evenly */
+    padding: 8px 12px; /* Adjust padding for smaller screens */
     font-size: 0.9rem; /* Adjust font size */
   }
 
   .content {
     margin-top: 0; /* Remove top margin for better spacing */
-    margin-left: 0;
   }
 }
 
@@ -175,28 +158,18 @@ body {
     padding: 10px; /* Further reduce padding */
   }
 
-  .profile-photo {
-    width: 100px; /* Reduce profile photo size */
-    height: 100px;
-  }
-
   .tabs {
     flex-direction: row; /* Stack tabs vertically */
     align-items: center; /* Center align vertically stacked tabs */
     gap: 10px; /* Space between vertically stacked tabs */
-    margin: 10px 0; /* Adjust margin */
+    height: 250px;
   }
 
-  .tabs button {
-    width: 100%; /* Make tabs take full width on small devices */
-    margin-bottom: 5px; /* Space between buttons */
-  }
-  .main-content {
-    padding: 10px; /* Reduce padding for small screens */
+  .tabs a {
+    width: 100%; /* Make tabs take full width */
   }
 
   .content {
-    padding: 160px; /* Adjust padding for content area */
+    padding: 10px; /* Adjust padding for small screens */
   }
 }
-

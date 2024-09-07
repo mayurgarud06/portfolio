@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/Card.css';
 
-const Card = ({ image, title, description, link, isProject }) => {
+const Card = ({ image, title, description, link, isProject,onClick }) => {
     // const handleClick = () => {
     //     if (isProject) {
     //       window.open(link, '_blank');
@@ -29,9 +29,9 @@ const Card = ({ image, title, description, link, isProject }) => {
                         View Project
                     </a>
                 ) : (
-                    <a href={link} className="card-link">
-                        Read Blog
-                    </a>
+                    <button onClick={onClick} className="card-link">
+                    Read Blog
+                  </button>
                 )}
             </div>
         </div>

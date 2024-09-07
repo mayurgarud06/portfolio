@@ -1,5 +1,6 @@
 // App.js
-import React, { useState } from 'react';
+import { React,useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom'; // Importing necessary components from react-router-dom
 import './App.css';
 import About from './Components/About';
 import Projects from './Components/Projects';
@@ -7,76 +8,115 @@ import Blog from './Components/Blog';
 import ProfileSection from './Components/ProfileSection'; // Import the ProfileSection component
 import Resume from './Components/Resume';
 import Contact from './Components/Contact';
+import AddBlog from './Components/AddBlog';
+import blogImage from './static/blogImages.js';
+import FirstBlog from './blogs/FirstBlog.js';
 import 'leaflet/dist/leaflet.css';
 
-
 const App = () => {
-  const [currentTab, setCurrentTab] = useState('about');
+  
+const initialBlogs = [
+  {
+    id: 1,
+    title: "First Blog Post",
+    description: "An insightful post on web development trends.",
+    content: `<p>This is the detailed content of the first blog post.</p>`,
+    // content: <FirstBlog/>,
+    image: blogImage.Blog,
+  },
+  {
+    id: 2,
+    title: "Second Blog Post",
+    description: "Exploring the latest in frontend technologies.",
+    content: `<p>This is the detailed content of the second blog post.</p>`,
+    // content: <FirstBlog/>,
+    image: blogImage.Blog,
+  },
+  {
+    id: 3,
+    title: "Third Blog Post",
+    description: "Exploring the latest in frontend technologies.",
+    content: `<p>This is the detailed content of the second blog post.</p>`,
+    // content: <FirstBlog/>,
+    image: blogImage.Blog,
+  },
+  {
+    id: 4,
+    title: "Fourth Blog Post",
+    description: "Exploring the latest in Backtend technologies.",
+    content: `<p>This is the detailed content of the second blog post.</p>`,
+    // content: <FirstBlog/>,
+    image: blogImage.Blog,
+  },
+  {
+    id: 5,
+    title: "fifth Blog Post",
+    description: "Exploring the latest in Backtend technologies.",
+    content: `<p>This is the detailed content of the second blog post.</p>`,
+    // content: <FirstBlog/>,
+    image: blogImage.Blog,
+  }
+  // Add more blogs here
+];
+  const [blogs, setBlogs] = useState(initialBlogs); // Add state for blogs
 
-  const handleTabChange = (tab) => {
-    setCurrentTab(tab);
+  const addBlog = (newBlog) => {
+    setBlogs((prevBlogs) => [...prevBlogs, newBlog]);
   };
-
-  const renderContent = () => {
-    switch (currentTab) {
-      case 'about':
-        return <About />;
-      case 'projects':
-        return <Projects />;
-      case 'blog':
-        return <Blog />;
-      case 'resume':
-        return <Resume/>
-      case 'contact':
-        return <Contact/>
-      default:
-        return null;
-    }
-  };
-
   return (
-    <div className="app">
-      <ProfileSection />
-      <div className="main-content">
-        <div className="tab-content">
-          <div className="tabs">
-            <button
-              className={currentTab === 'about' ? 'active' : ''}
-              onClick={() => handleTabChange('about')}
-            >
-              About
-            </button>
-            <button
-              className={currentTab === 'resume' ? 'active' : ''}
-              onClick={() => handleTabChange('resume')}
-            >
-              Resume
-            </button>
-            <button
-              className={currentTab === 'projects' ? 'active' : ''}
-              onClick={() => handleTabChange('projects')}
-            >
-              Projects
-            </button>
-            <button
-              className={currentTab === 'blog' ? 'active' : ''}
-              onClick={() => handleTabChange('blog')}
-            >
-              Blog
-            </button>
-            <button
-              className={currentTab === 'contact' ? 'active' : ''}
-              onClick={() => handleTabChange('contact')}
-            >
-              Contact
-            </button>
-          </div>
-          <div className="content">
-            {renderContent()}
+    <Router>
+      <div className="app">
+        <ProfileSection />
+        <div className="main-content">
+          <div className="tab-content">
+            <div className="tabs">
+              <NavLink
+                to="/about"
+                className={({ isActive }) => (isActive ? 'active' : '')}
+              >
+                About
+              </NavLink>
+              <NavLink
+                to="/resume"
+                className={({ isActive }) => (isActive ? 'active' : '')}
+              >
+                Resume
+              </NavLink>
+              <NavLink
+                to="/projects"
+                className={({ isActive }) => (isActive ? 'active' : '')}
+              >
+                Projects
+              </NavLink>
+              <NavLink
+                to="/blog"
+                className={({ isActive }) => (isActive ? 'active' : '')}
+              >
+                Blog
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) => (isActive ? 'active' : '')}
+              >
+                Contact
+              </NavLink>
+            </div>
+            <div className="content">
+              <Routes>
+                <Route path="/about" element={<About />} />
+                <Route path="/resume" element={<Resume />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/blog" element={<Blog blogs={blogs} addBlog={addBlog}/>} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/add-blog" element={<AddBlog addBlog={addBlog} />} /> {/* Route for AddBlog */}
+                <Route path="/" element={<About />} /> {/* Default route */}
+                {/* <Route path="/firstBlog" element={<FirstBlog/>} /> Default route */}
+              </Routes>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Router>
   );
 };
 

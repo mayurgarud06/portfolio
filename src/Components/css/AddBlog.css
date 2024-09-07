@@ -1,0 +1,145 @@
+/* AddBlog.css */
+
+.add-blog {
+    background-color: #282c34; /* Dark background for the form */
+    color: #f7f4f4; /* Light text color */
+    padding: 20px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 800px; /* Limit the width of the form */
+    margin: 20px auto; /* Center align the form */
+  }
+  
+  .add-blog h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #FAB005; /* Highlight color for the title */
+    text-align: center; /*Center align the title */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #6e6f77; /* Light background for input fields */
+    color: #ddd; /* Dark text color for readability */
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px; /* Minimum height for the text area */
+  }
+  
+  .add-blog button {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    display: block;
+    width: 100%; /* Full width button */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  button:focus {
+    outline: none; /* Remove outline on focus */
+  }
+  
+  .title {
+    background-color: #6e6f77; /* Darker background color */
+    color: #6e6f77; /* Light text color for better readability */
+    border: 1px solid #444; /* Optional: border for better contrast */
+    padding: 8px; /* Optional: padding for better spacing */
+    border-radius: 4px; /* Optional: rounded corners */
+    font-size: 16px; /* Optional: increase font size */
+  }
+  
+  /* Optional: Add a focus style to enhance visibility when focused */
+  .title:focus {
+    background-color: #6e6f77; /* Slightly darker background on focus */
+    border-color: #777; /* Border color change on focus */
+    outline: none; /* Remove default outline */
+  }
+  /* this is editor css */
+  /* Customize ReactQuill editor */
+  .custom-quill .ql-container {
+    background-color: #6e6f77; /* Darker background for better contrast */
+    color: #ece5e5; /* Lighter text color for better readability */
+  }
+  
+  .custom-quill .ql-toolbar {
+    background-color: #93b4c4; /* Dark background for the toolbar */
+    border: none;
+  }
+  
+  .custom-quill .ql-toolbar .ql-picker,
+  .custom-quill .ql-toolbar button {
+    color: #000000; /* Light text color for toolbar buttons */
+  }
+  
+  .custom-quill .ql-editor {
+    min-height: 200px; /* Set minimum height for better visibility */
+    font-size: 16px; /* Increase font size for better readability */
+    line-height: 1.6; /* Increase line height for better readability */
+  }
+  
+  /* Custom styles for Quill editor dropdowns */
+  .ql-toolbar .ql-picker {
+    background-color: #93b4c4; /* Dark background for dropdowns */
+    color: #0b0b0b; /* Light text color for dropdowns */
+    border: 1px solid #444; /* Border to make dropdowns stand out */
+  }
+  
+  /* Custom styles for Quill editor dropdown items */
+  .ql-picker-item .ql-picker-label{
+    background-color: #93b4c4; /* Dark background for dropdown items */
+    color: #111111; /* Light text color for dropdown items */
+    border-bottom: 1px solid #444; /* Subtle border between items */
+  }
+  
+  /* Ensure the picker options have a consistent style */
+  .ql-picker-options {
+    background-color: #93b4c4 !important; /* Dark background for dropdown options */
+    /* display: block !important; Ensure options are displayed */
+    min-width: 100% !important;
+    padding: 4px 8px !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    color: #0b0b0b !important; /* Light text color */
+  }
+
+  /* Change background color on hover for dropdown items */
+  .ql-picker-item:hover {
+    background-color: rgb(186, 194, 197); /* Slightly lighter background on hover */
+    color: #070707; /* Change text color on hover for better contrast */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  /* Custom styles for Quill editor active dropdown */
+  .ql-picker.ql-active .ql-picker-label,
+  .ql-picker.ql-active .ql-picker-item {
+    background-color: #666; /* Darker background when active */
+  }
