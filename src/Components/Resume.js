@@ -46,6 +46,7 @@ const Resume = () =>{
         <div className="skill-item"><img src={Images.github}/><p>GitHub</p></div>
         <div className="skill-item"><img src={Images.JavaScript}/><p>JavaScript</p></div>
         <div className="skill-item"><img src={Images.html}/><p>HTML</p></div>
+        <div className="skill-item"><img src={Images.firebase}/><p>Firebase</p></div>
         <div className="skill-item"><img src={Images.gcp}/><p>Google Cloud Platform</p></div>
         <div className="skill-item"><img src={Images.docker}/><p>Docker Container</p></div>
         <div className="skill-item"> <img src={Images.api}/><p>Rest API</p></div>

@@ -36,22 +36,22 @@ drive results."
     <h1> Testomonies ...</h1>
     <div className="testimonial-card-container">
     <TestimonialCard
-          name="John Doe"
-          details="Software Engineer at xyz"
+          name="Pratyush"
+          details="Software Engineer at FIS"
           photo={Images.personLogo}
           testimonial="This person is fantastic to work with and always delivers quality work on time."
         />
         <TestimonialCard
-          name="Jane Smith"
-          details="Product Manager at ABC"
+          name="Kedar Gadgil"
+          details="Manager at FIS"
           photo={Images.personLogo}
           testimonial="A great collaborator who brings out the best in others."
         />
         <TestimonialCard
-          name="Mike Johnson"
-          details="Designer at DEF"
+          name="Ganesh Dhake"
+          details="Developer at Infosys"
           photo={Images.personLogo}
-          testimonial="An amazing designer with a sharp eye for detail."
+          testimonial="An amazing developer with a sharp eye for detail requirement."
         />
       </div>
     <h1> Clients</h1>

@@ -26,6 +26,7 @@ import swagger from './png/swagger.png';
 import postman from './png/postman.png';
 import workInProgress from './working.webp';
 import googlecloudLogo from './googlecloud.png';
+import firebase from './png/firebase.png'
 
 export default {
   profileLogo,
@@ -54,5 +55,6 @@ export default {
   swagger,
   postman,
   workInProgress,
-  googlecloudLogo
+  googlecloudLogo,
+  firebase
 };
