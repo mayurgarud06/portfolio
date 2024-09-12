@@ -47,7 +47,7 @@
   justify-content: center; /* Center align the cards horizontally */
 }
 .card {
-  flex: 1 1 calc(25% - 20px); /* Adjust the size of the cards and space between them */
+  /* flex: 1 1 calc(25% - 20px); Adjust the size of the cards and space between them */
   box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
 

@@ -1,12 +1,31 @@
 // Projects.js
-import React, { useEffect } from 'react';
+import React, { useEffect ,useState} from 'react';
 import "./css/Resume.css";
+import { ref, getDownloadURL } from 'firebase/storage'; // Import Firebase Storage functions
+import { storage } from './Config/firebaseConfig.js'; // Import Firebase storage
 import Images from '../static/Images.js';
 
 const Resume = () =>{
   
-   const resumeLink ="https://docs.google.com/document/d/1kZ-Tvl1qvZ9unx0JX91519-Zsc3kNlGFLmZJomGKupg/pub?embedded=true";
-   const downloadLink="https://docs.google.com/document/d/1kZ-Tvl1qvZ9unx0JX91519-Zsc3kNlGFLmZJomGKupg/export?format=pdf";
+  //  const resumeLink ="https://docs.google.com/document/d/1kZ-Tvl1qvZ9unx0JX91519-Zsc3kNlGFLmZJomGKupg/pub?embedded=true";
+  //  const downloadLink="https://docs.google.com/document/d/1kZ-Tvl1qvZ9unx0JX91519-Zsc3kNlGFLmZJomGKupg/export?format=pdf";
+  const [resumeUrl, setResumeUrl] = useState('');
+  const downloadLink = resumeUrl; // This will be the URL from Firebase for download
+
+  // Fetch resume URL from Firebase Storage
+  useEffect(() => {
+    const fetchResume = async () => {
+      try {
+        const resumeRef = ref(storage, `gs://portfolioblogstorage.appspot.com/Resume/Mayur Dilip Garud 24_06_2024.pdf`); // Replace with your storage path
+        const url = await getDownloadURL(resumeRef);
+        setResumeUrl(url); // Set the resume URL from Firebase
+      } catch (error) {
+        console.error('Error fetching resume from Firebase Storage:', error);
+      }
+    };
+
+    fetchResume();
+  }, []);
   
   const handleDownload = () => {
     // Trigger download
@@ -22,7 +41,7 @@ const Resume = () =>{
       <h2 className='resume-title'> My Resume</h2>
       <div className="iframe-container">
         <iframe
-          src={resumeLink}
+          src={downloadLink}
           title="Resume Preview"
           width="100%"
           height="600px"

@@ -6,7 +6,7 @@
   border-radius: 8px;
   background: #616060;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 800px;
+  width: 100%;
   justify-self: center;
 }
 .contact-divider{

@@ -1,12 +1,12 @@
 /* ProfileSection.css */
 .profile-section {
     position: sticky;
-    top: 20px;
+    top: 15px;
     margin: 20px; /* Added margin to create space around the card */
     width: 300px;
     background: #282c34;
     /* padding: 20px; */
-    height: calc(100vh - 10vh); /* Adjust height to account for top, bottom, and margin */
+    height: calc(100vh - 5vh); /* Adjust height to account for top, bottom, and margin */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Enhanced shadow for a more card-like feel */
     border: 1px solid #ddd;
     border-radius: 12px; /* Slightly increased border radius for a softer look */
@@ -123,9 +123,10 @@
   }
   @media (max-width: 768px) {
     .profile-section {
-        width: 100%;
-        margin: 10px 0; /* Adjust margin for smaller screens */
-        height: auto; /* Allow height to adjust based on content */
+        align-items: center;
+        width: auto;
+        /* margin: 15px; Adjust margin for smaller screens */
+        /* height: auto; Allow height to adjust based on content */
         position: relative; /* Remove sticky positioning */
     }
 }

@@ -6,13 +6,13 @@
      justify-content: center;
      min-height: 100vh;
      background-color: #282c34;
-     padding: 50px;
+     padding-top: 50px;
    }
 
    .resume-container {
      text-align: center;
      background: #373c47;
-     padding: 20px;
+     padding: 10px;
      border-radius: 12px;
      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
      max-width: 1200px;
@@ -137,3 +137,57 @@
      color: #ccc;
      /* Change text color if needed */
    }
+
+   /* Media Queries */
+
+/* For tablets and smaller laptops (up to 1024px) */
+@media (max-width: 1024px) {
+  .resume-container {
+    padding: 20px;
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .resume-iframe {
+    height: 800px; /* Reduce iframe height */
+  }
+}
+
+/* For tablets and mobile devices (up to 768px) */
+@media (max-width: 768px) {
+  .Resume-content {
+    padding: 10px;
+  }
+  .resume-container {
+    /* padding: 15px; */
+    width: 95%; /* Further adjust width */
+  }
+
+  .resume-iframe {
+    height: 600px; /* Further reduce iframe height */
+  }
+
+  .download-button {
+    padding: 15px 30px; /* Adjust button padding */
+    font-size: 16px; /* Adjust font size */
+  }
+}
+
+/* For small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+  .Resume-content {
+    padding: 10px;
+  }
+  .resume-container {
+    padding: 10px;
+    width: 100%; /* Full width for small screens */
+  }
+
+  .resume-iframe {
+    height: 400px; /* Reduce iframe height for small screens */
+  }
+
+  .download-button {
+    padding: 10px 20px; /* Adjust button padding */
+    font-size: 14px; /* Adjust font size */
+  }
+}
