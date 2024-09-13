@@ -120,7 +120,6 @@ body {
     width: 100%;
     /* height: auto; Allow profile section to grow with content */
     margin-bottom: 20px; /* Space between profile and main content */
-    padding: 10px; /* Further reduce padding */
   }
 
   .main-content {
@@ -135,9 +134,7 @@ body {
 
 /* For mobile devices (up to 768px) */
 @media (max-width: 768px) {
-  .profile-section {
-    padding: 10px; /* Further reduce padding */
-  }
+ 
   .tabs {
     flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
     justify-content: center; /* Center align tabs */
@@ -158,9 +155,7 @@ body {
 
 /* For small mobile devices (up to 480px) */
 @media (max-width: 480px) {
-  .profile-section {
-    padding: 10px; /* Further reduce padding */
-  }
+  
 
   .tabs {
     flex-direction: row; /* Stack tabs vertically */

@@ -27,13 +27,36 @@ const Resume = () =>{
     fetchResume();
   }, []);
   
-  const handleDownload = () => {
-    // Trigger download
-    const link = document.createElement('a');
-    link.href = downloadLink;
-    link.target = '_blank';
-    link.download = "resume.pdf";//this may not be work
-    link.click();
+  const handleDownload = async() => {
+    // // Trigger download
+    // const link = document.createElement('a');
+    // link.href = downloadLink;
+    // link.target = '_blank';
+    // link.download = "resume.pdf";//this may not be work
+    // link.click();
+    if (resumeUrl) {
+      try {
+        // Fetch the file as a blob
+        const response = await fetch(resumeUrl);
+        if (!response.ok) console.log("Network response was not ok.");
+        const blob = await response.blob();
+
+        // Create a local URL for the blob and trigger download
+        const link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = 'My_Resume.pdf'; // Name of the file when downloaded
+        document.body.appendChild(link); // Append to body to ensure click works
+        link.click();
+
+        // Clean up the local URL
+        window.URL.revokeObjectURL(link.href);
+        document.body.removeChild(link); // Remove from body after download
+      } catch (error) {
+        console.error('Error downloading resume:', error);
+      }
+    } else {
+      console.error('No resume URL available.');
+    }
   };
   return(
   <div className="Resume-content">
