@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/",
+  "homepage": "https://mayurgarud06.github.io/portfolio",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -10,6 +10,7 @@
     "emailjs-com": "^3.2.0",
     "firebase": "^10.13.1",
     "firebase-tools": "^13.17.0",
+    "gh-pages": "^6.1.1",
     "leaflet": "^1.9.4",
     "portfolio": "file:",
     "react": "^18.3.1",
