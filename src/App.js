@@ -1,5 +1,5 @@
 // App.js
-import { React,useState } from 'react';
+import { React } from 'react';
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom'; // Importing necessary components from react-router-dom
 import './App.css';
 import About from './Components/About';
@@ -9,9 +9,7 @@ import ProfileSection from './Components/ProfileSection'; // Import the ProfileS
 import Resume from './Components/Resume';
 import Contact from './Components/Contact';
 import AddBlog from './Components/AddBlog';
-import blogImage from './static/blogImages.js';
-import FirstBlog from './blogs/FirstBlog.js';
-import Working from './Components/working.js';
+// import Working from './Components/working.js';
 import 'leaflet/dist/leaflet.css';
 
 const App = () => {

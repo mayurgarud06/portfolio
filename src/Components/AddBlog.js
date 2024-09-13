@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'; // Import the styles for the editor
-import { collection,addDoc, getDocs ,db} from './Config/firebaseConfig'; //import firbase 
+import { collection,addDoc, db} from './Config/firebaseConfig'; //import firbase 
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage'; // Import Firebase Storage
 import blogImage from '../static/blogImages'
 import "./css/AddBlog.css";
@@ -17,7 +17,7 @@ const AddBlog = ({ addBlog }) => {
     const navigate = useNavigate();
 
     const toolbarOptions = [
-      [{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
+      [{'header': '1' }, { 'header': '2' }, { 'font': [] }],
       [{ 'list': 'ordered'}, { 'list': 'bullet' }],
       ['bold', 'italic', 'underline'],
       [{ 'color': [] }, { 'background': [] }],
