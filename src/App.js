@@ -1,6 +1,6 @@
 // App.js
 import { React } from 'react';
-import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom'; // Importing necessary components from react-router-dom
+import { BrowserRouter as Router, Route, Routes, NavLink,Navigate } from 'react-router-dom'; // Importing necessary components from react-router-dom
 import './App.css';
 import About from './Components/About';
 import Projects from './Components/Projects';
@@ -109,7 +109,7 @@ const App = () => {
                 <Route path="/blog" element={<Blog/>} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/add-blog" element={<AddBlog/>} /> {/* Route for AddBlog */}
-                <Route path="/" element={<About />} /> {/* Default route */}
+                <Route path="*" element={<Navigate to="/portfolio"/>} /> {/* Default route */}
                 {/* <Route path="/firstBlog" element={<FirstBlog/>} /> Default route */}
               </Routes>
             </div>
