@@ -1,6 +1,7 @@
 // App.js
 import { React } from 'react';
-import { BrowserRouter as Router, Route, Routes, NavLink,Navigate } from 'react-router-dom'; // Importing necessary components from react-router-dom
+// import { BrowserRouter as Router, Route, Routes, NavLink,Navigate } from 'react-router-dom'; // Importing necessary components from react-router-dom
+import { HashRouter as Router, Route, Routes, NavLink,Navigate } from 'react-router-dom'; 
 import './App.css';
 import About from './Components/About';
 import Projects from './Components/Projects';
