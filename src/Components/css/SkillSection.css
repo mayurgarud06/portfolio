@@ -1,0 +1,38 @@
+.skills-tabs{
+    display: inline-flex; /* Align tabs in a row */
+    justify-content: space-between; /* Align tabs to the right */
+    gap: 5px; /* Space between tabs */
+    height: 45px;
+    margin-bottom: 20px; /* Space between tabs and content */
+    padding: 5px; /* Add padding inside the tabs container */
+    background-color: #40454e; /* Optional background for tabs */
+    border-radius: 10px;
+    flex-wrap: wrap; /* Allow wrapping to prevent overflow */
+    width: fit-content; /* Fit tabs content */
+    /* margin-left: auto; Push tabs container to the right */
+    z-index: 1;
+}
+.skills-tabs button{
+    background-color: #40454e;
+    color: #ddd;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap; /* Prevent the text from wrapping */
+}
+
+.skills-tabs button.active-tab {
+    /* color: #FAB005; */
+    color: black;
+    background-color: #ccc;
+    font-weight: bold;
+  }
+  
+  .skills-tabs button:hover {
+    background-color: #ccc;
+    color: black;
+  }

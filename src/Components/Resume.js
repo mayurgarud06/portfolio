@@ -4,6 +4,7 @@ import "./css/Resume.css";
 import { ref, getDownloadURL } from 'firebase/storage'; // Import Firebase Storage functions
 import { storage } from './Config/firebaseConfig.js'; // Import Firebase storage
 import Images from '../static/Images.js';
+import SkillsTabs from './SkillsSection.js';
 
 const Resume = () =>{
   
@@ -78,7 +79,8 @@ const Resume = () =>{
       </button>
     <h1> Skills...</h1>
    <div className='skill_container'>
-      <div className='skills'>
+       <SkillsTabs/>
+      {/* <div className='skills'>
         <div className="skill-item"><img src={Images.Java}/><p>Java</p></div>
         <div className="skill-item"><img src={Images.python}/><p>Python</p></div>
         <div className="skill-item"><img src={Images.Mysql}/><p>MySQL</p></div>
@@ -94,7 +96,8 @@ const Resume = () =>{
         <div className="skill-item"> <img src={Images.api}/><p>Rest API</p></div>
         <div className="skill-item"><img src={Images.swagger}/><p>swagger Documentation API</p></div>
         <div className="skill-item"><img src={Images.postman}/><p>Postman API</p></div>
-      </div>   
+      </div> */}
+    
     </div>
     
   </div>
