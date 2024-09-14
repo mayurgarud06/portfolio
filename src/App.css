@@ -110,20 +110,20 @@ body {
 
 /* Media Queries */
 /* For tablets and smaller screens (up to 1024px) */
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
   .app {
     flex-direction: column; /* Stack profile and main content */
   }
 
   .profile-section {
-    position: relative;
+    position: relative; 
     width: 100%;
     /* height: auto; Allow profile section to grow with content */
     margin-bottom: 20px; /* Space between profile and main content */
   }
 
   .main-content {
-    margin-left: 0; /* Remove margin between profile and main content */
+    margin-left: auto; /*Remove margin between profile and main content*/
     min-width: auto; /* Remove min-width for smaller screens */
   }
 

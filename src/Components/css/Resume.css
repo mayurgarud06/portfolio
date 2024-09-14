@@ -71,6 +71,7 @@
      flex-wrap: wrap;
      justify-content: center;
      gap: 30px;
+     margin: 15px;
      /*Spacebetweeneachskillitem*/
      max-width: 1200px;
      /*Limitsthemaximumwidth*/

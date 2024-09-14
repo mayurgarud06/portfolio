@@ -129,4 +129,13 @@
         position: relative; /* Remove sticky positioning */
     }
 }
+@media (max-width: 1000px) {
+  .profile-section {
+      align-items: center;
+      width: auto;
+      /* margin: 15px; Adjust margin for smaller screens */
+      /* height: auto; Allow height to adjust based on content */
+      position: relative; /* Remove sticky positioning */
+  }
+}
   
