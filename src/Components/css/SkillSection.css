@@ -1,85 +1,61 @@
-.skills-tabs{
-    display: inline-flex; /* Align tabs in a row */
-    justify-content: space-between; /* Align tabs to the right */
-    gap: 5px; /* Space between tabs */
-    /* height: 45px; */
-    height: max-content;
-    margin-bottom: 20px; /* Space between tabs and content */
-    padding: 5px; /* Add padding inside the tabs container */
-    background-color: #40454e; /* Optional background for tabs */
-    border-radius: 10px;
-    flex-wrap: wrap; /* Allow wrapping to prevent overflow */
-    width: fit-content; /* Fit tabs content */
-    /* margin-left: auto; Push tabs container to the right */
-    z-index: 1;
+.skills-tabs {
+  display: inline-flex;
+  justify-content: flex-start;
+  gap: 6px;
+  height: max-content;
+  margin-bottom: 20px;
+  padding: 6px;
+  background: rgba(8, 9, 12, 0.45);
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  flex-wrap: wrap;
+  width: fit-content;
+  z-index: 1;
 }
-.skills-tabs button{
-    background-color: #40454e;
-    color: #ddd;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-    text-decoration: none;
-    text-align: center;
-    white-space: nowrap; /* Prevent the text from wrapping */
+
+.skills-tabs button {
+  background: transparent;
+  color: var(--text-secondary);
+  border: none;
+  padding: 9px 14px;
+  cursor: pointer;
+  border-radius: 999px;
+  transition: background-color var(--transition), color var(--transition);
+  text-align: center;
+  white-space: nowrap;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .skills-tabs button.active-tab {
-    /* color: #FAB005; */
-    color: black;
-    background-color: #ccc;
-    font-weight: bold;
+  color: #1a1408;
+  background-color: var(--accent);
+  font-weight: 700;
+}
+
+.skills-tabs button:hover:not(.active-tab) {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+@media (max-width: 1240px) {
+  .skills-tabs {
+    justify-content: center;
+    border-radius: var(--radius-md);
   }
-  
-  .skills-tabs button:hover {
-    background-color: #ccc;
-    color: black;
+}
+
+@media (max-width: 768px) {
+  .skills-tabs {
+    width: 100%;
+    height: auto;
+    justify-content: center;
   }
 
-
-  @media (max-width: 1240px) {
-    .skills-tabs {
-      flex-wrap: wrap;
-      justify-content: center;
-      height: max-content;
-      
-    }
+  .skills-tabs button {
+    flex-grow: 1;
+    padding: 8px 10px;
+    font-size: 0.8rem;
   }
-  
-  /* For mobile devices (up to 768px) */
-  @media (max-width: 768px) {
-   
-    .skills-tabs {
-      flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
-      justify-content: center; /* Center align tabs */
-      gap: 2px; /* Reduce gap between tabs */
-      padding: 10px; /* Adjust padding */
-      flex-direction: row; /* Stack tabs vertically */
-      align-items: center; /* Center align vertically stacked tabs */
-      height: 350px;
-    }
-  
-    .skills-tabs button {
-      flex-grow: 1; /* Allow tabs to grow evenly */
-      padding: 8px 12px; /* Adjust padding for smaller screens */
-      font-size: 0.9rem; /* Adjust font size */
-      width: 100%;
-    }
-  }
-  
-  /* For small mobile devices (up to 480px) */
-  @media (max-width: 480px) {
-    .skills-tabs {
-      flex-direction: row; /* Stack tabs vertically */
-      align-items: center; /* Center align vertically stacked tabs */
-      gap: 10px; /* Space between vertically stacked tabs */
-      height: 350px;
-    }
-    .skills-tabs button {
-      width: 100%; /* Make tabs take full width */
-    }
-  
-  }
-  
+}

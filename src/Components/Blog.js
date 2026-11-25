@@ -4,8 +4,6 @@ import './css/blog.css';
 import './css/AddBlog.css';
 import Card from './Card';
 import { Link } from 'react-router-dom';
-import blogImage from '../static/blogImages';
-// import { db } from '../firebase'; // Assuming firebase.js is correctly configured
 import { collection, getDocs ,db} from './Config/firebaseConfig';
 
 

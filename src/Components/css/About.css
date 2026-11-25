@@ -1,79 +1,134 @@
-/* About.css */
-.about-container {
-  padding: 20px;
+.about-content {
+  max-width: 920px;
 }
 
-.about-divider {
-  border: none;/*Removedefaultstyling*/
-  border-top: 5px solid #FAB005;/*Linestyleandcolor*/
-  margin: 10px 0;/*Spacearoundtheline*/
-  width: 150px;/*Adjustwidthforasmallerline*/
-  align-self: flex-start;/*Alignsthelinetothestartofitscontainer*/
+.about-lead {
+  font-size: 1.12rem;
+  color: var(--text-primary);
+  margin: 0 0 24px;
+  max-width: 58ch;
 }
 
-.testimonial-card-container {
+.about-content p {
+  color: var(--text-secondary);
+  margin: 0 0 16px;
+  max-width: 62ch;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 8px 0 28px;
+}
+
+.about-panel {
+  padding: 20px 22px;
+  background: rgba(8, 9, 12, 0.35);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.about-panel:hover {
+  border-color: rgba(232, 184, 74, 0.35);
+  transform: translateY(-2px);
+}
+
+.about-panel h3 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  color: var(--accent-strong);
+}
+
+.about-panel p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.about-section-title {
+  margin: 28px 0 14px;
+  font-size: 1.45rem;
+}
+
+.about-closing {
+  margin-bottom: 8px;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.experience-item {
+  padding: 18px 20px;
+  background: rgba(8, 9, 12, 0.35);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.experience-header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 20px;
-  padding: 0 10px;
-  /* Adjust padding as needed */
+  gap: 8px 16px;
+  margin-bottom: 10px;
 }
 
-.testimonial-card-container>* {
-  flex: 1 1 calc(33.333% - 20px);
-  /* 3 cards in a row */
-  margin: 10px;
-  box-sizing: border-box;
-  background: #282c34;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-  cursor: pointer;
-  opacity: 0.9;
+.experience-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--text-primary);
 }
 
-/* Hover Effect */
-.testimonial-card-container>*:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  animation: hoverEffect 0.1s ease-in-out;
-  opacity: 1;
-  /* Full opacity on hover */
-
+.experience-header span {
+  color: var(--accent-strong);
+  font-size: 0.88rem;
+  font-weight: 600;
 }
 
-/* Hover Animation */
-@keyframes hoverEffect {
-  0% {
-    transform: translateY(0) scale(1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.experience-item ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-secondary);
+}
+
+.experience-item li {
+  margin-bottom: 6px;
+  max-width: 70ch;
+}
+
+.education-panel p {
+  margin: 0;
+}
+
+.achievements-list {
+  margin: 0 0 8px;
+  padding-left: 18px;
+  color: var(--text-secondary);
+}
+
+.achievements-list li {
+  margin-bottom: 6px;
+  max-width: 70ch;
+}
+
+.testimonial-card-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 20px;
+  margin-top: 36px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
   }
 
-  50% {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  }
-
-  100% {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-}
-
-/* For medium screens */
-@media (max-width: 1024px) {
-  .testimonial-card-container>* {
-    flex: 1 1 calc(50% - 20px);
-    /* 2 cards in a row */
-  }
-}
-
-/* For small screens */
-@media (max-width: 600px) {
-  .testimonial-card-container>* {
-    flex: 1 1 100%;
-    /* 1 card per row */
+  .testimonial-card-container {
+    grid-template-columns: 1fr;
   }
 }

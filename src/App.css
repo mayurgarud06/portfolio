@@ -1,174 +1,153 @@
-/* Global Styles */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #020202; /* Match the background color of the profile section */
-  color: #f7f4f4; /* Default text color */
-  font-family: Arial, sans-serif; /* Set a default font */
-}
-
-/* App Container */
 .app {
   display: flex;
-  background: #020202;
-  min-height: 100vh; /* Ensure the app covers the full viewport height */
+  min-height: 100vh;
+  gap: 0;
 }
 
-/* Profile Section */
-/* .profile-section {
-  position: sticky;
-  left: 0;
-  width: 250px;
-  background: #282c34;
-  padding: 20px;
-  height: 100vh;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-y: auto;
-} */
-
-/* Main Content */
 .main-content {
-  margin-left: 5px;
-  padding: 20px;
   flex: 1;
-  background: #020202;
-  min-width: 600px; /* Set a minimum width for larger screens */
-  overflow-y: auto;
+  min-width: 0;
+  padding: 24px 28px 28px 8px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 
-/* Tab Content */
 .tab-content {
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  border: 1px solid #ddd;
-  background: #282c34;
-  border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  min-height: 100vh;
+  flex: 1;
+  padding: 22px 24px 28px;
+  background: linear-gradient(165deg, rgba(28, 33, 43, 0.92), rgba(20, 23, 30, 0.96));
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+  min-height: calc(100vh - 48px);
+  animation: fade-up 0.55s var(--transition) both;
 }
 
-/* Tabs Navigation */
 .tabs {
-  display: inline-flex; /* Align tabs in a row */
-  justify-content: flex-end; /* Align tabs to the right */
-  gap: 10px; /* Space between tabs */
-  height: 45px;
-  margin-bottom: 20px; /* Space between tabs and content */
-  padding: 5px; /* Add padding inside the tabs container */
-  background-color: #40454e; /* Optional background for tabs */
-  border-radius: 10px;
-  flex-wrap: wrap; /* Allow wrapping to prevent overflow */
-  width: fit-content; /* Fit tabs content */
-  margin-left: auto; /* Push tabs container to the right */
-  z-index: 1;
+  display: inline-flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin: 0 0 28px auto;
+  padding: 6px;
+  background: rgba(8, 9, 12, 0.45);
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  flex-wrap: wrap;
+  width: fit-content;
+  z-index: 2;
 }
 
 .tabs a {
-  background-color: #40454e;
-  color: #ddd;
+  position: relative;
+  color: var(--text-secondary);
   border: none;
-  padding: 10px 15px;
+  padding: 10px 16px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
+  border-radius: 999px;
   text-decoration: none;
   text-align: center;
-  white-space: nowrap; /* Prevent the text from wrapping */
-}
-
-.tabs a.active {
-  color: #FAB005;
-  font-weight: bold;
+  white-space: nowrap;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: color var(--transition), background-color var(--transition);
 }
 
 .tabs a:hover {
-  background-color: #ccc;
-  color: black;
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.04);
 }
 
-/* Content Area */
+.tabs a.active {
+  color: #1a1408;
+  background: var(--accent);
+  font-weight: 700;
+}
+
 .content {
-  margin-top: -70px;
-  flex: 1; /* Take remaining space */
-  padding: 20px;
-  background: #282c34;
-  border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow-y: auto;
+  flex: 1;
+  padding: 4px 4px 8px;
+  animation: fade-up 0.65s 0.08s var(--transition) both;
 }
 
-/* Media Queries */
-/* For tablets and smaller screens (up to 1024px) */
+.content h1,
+.content h2,
+.about-content h1,
+.project-content h1,
+.Resume-content h1,
+.contact-container h2 {
+  font-size: clamp(1.75rem, 2.4vw, 2.25rem);
+  margin: 0 0 8px;
+}
+
+.section-divider,
+.about-divider,
+.project-divider,
+.contact-divider {
+  border: none;
+  border-top: 3px solid var(--accent);
+  margin: 0 0 22px;
+  width: 72px;
+  border-radius: 2px;
+}
+
 @media (max-width: 1000px) {
   .app {
-    flex-direction: column; /* Stack profile and main content */
-  }
-
-  .profile-section {
-    position: relative; 
-    width: 100%;
-    /* height: auto; Allow profile section to grow with content */
-    margin-bottom: 20px; /* Space between profile and main content */
+    flex-direction: column;
   }
 
   .main-content {
-    margin-left: auto; /*Remove margin between profile and main content*/
-    min-width: auto; /* Remove min-width for smaller screens */
+    padding: 8px 16px 24px;
   }
 
   .tab-content {
-    min-height: auto; /* Adjust min-height for smaller screens */
+    min-height: auto;
+  }
+
+  .tabs {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
   }
 }
 
-/* For mobile devices (up to 768px) */
 @media (max-width: 768px) {
- 
   .tabs {
-    flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
-    justify-content: center; /* Center align tabs */
-    gap: 5px; /* Reduce gap between tabs */
-    padding: 10px; /* Adjust padding */
+    width: 100%;
+    border-radius: var(--radius-md);
+    justify-content: center;
   }
 
   .tabs a {
-    flex-grow: 1; /* Allow tabs to grow evenly */
-    padding: 8px 12px; /* Adjust padding for smaller screens */
-    font-size: 0.9rem; /* Adjust font size */
+    flex: 1 1 auto;
+    padding: 10px 12px;
+    font-size: 0.85rem;
   }
 
   .content {
-    margin-top: 0; /* Remove top margin for better spacing */
+    padding: 0;
   }
 }
 
-/* For small mobile devices (up to 480px) */
 @media (max-width: 480px) {
-  
+  .main-content {
+    padding: 8px 12px 20px;
+  }
+
+  .tab-content {
+    padding: 16px 14px 20px;
+  }
 
   .tabs {
-    flex-direction: row; /* Stack tabs vertically */
-    align-items: center; /* Center align vertically stacked tabs */
-    gap: 10px; /* Space between vertically stacked tabs */
-    height: 250px;
+    gap: 4px;
+    padding: 5px;
   }
 
   .tabs a {
-    width: 100%; /* Make tabs take full width */
-  }
-
-  .content {
-    padding: 10px; /* Adjust padding for small screens */
+    padding: 8px 10px;
+    font-size: 0.8rem;
   }
 }

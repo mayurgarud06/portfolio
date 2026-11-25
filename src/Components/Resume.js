@@ -1,107 +1,47 @@
-// Projects.js
-import React, { useEffect ,useState} from 'react';
+import React from 'react';
 import "./css/Resume.css";
-import { ref, getDownloadURL } from 'firebase/storage'; // Import Firebase Storage functions
-import { storage } from './Config/firebaseConfig.js'; // Import Firebase storage
-import Images from '../static/Images.js';
 import SkillsTabs from './SkillsSection.js';
 
-const Resume = () =>{
-  
-  //  const resumeLink ="https://docs.google.com/document/d/1kZ-Tvl1qvZ9unx0JX91519-Zsc3kNlGFLmZJomGKupg/pub?embedded=true";
-  //  const downloadLink="https://docs.google.com/document/d/1kZ-Tvl1qvZ9unx0JX91519-Zsc3kNlGFLmZJomGKupg/export?format=pdf";
-  const [resumeUrl, setResumeUrl] = useState('');
-  const downloadLink = resumeUrl; // This will be the URL from Firebase for download
+const LOCAL_RESUME = `${process.env.PUBLIC_URL}/resume/Mayur_Garud_Resume.pdf`;
 
-  // Fetch resume URL from Firebase Storage
-  useEffect(() => {
-    const fetchResume = async () => {
-      try {
-        const resumeRef = ref(storage, `gs://portfolioblogstorage.appspot.com/Resume/Mayur Dilip Garud 24_06_2024.pdf`); // Replace with your storage path
-        const url = await getDownloadURL(resumeRef);
-        setResumeUrl(url); // Set the resume URL from Firebase
-      } catch (error) {
-        console.error('Error fetching resume from Firebase Storage:', error);
-      }
-    };
-
-    fetchResume();
-  }, []);
-  
-  const handleDownload = async() => {
-    // // Trigger download
-    // const link = document.createElement('a');
-    // link.href = downloadLink;
-    // link.target = '_blank';
-    // link.download = "resume.pdf";//this may not be work
-    // link.click();
-    if (resumeUrl) {
-      try {
-        // Fetch the file as a blob
-        const response = await fetch(resumeUrl);
-        if (!response.ok) console.log("Network response was not ok.");
-        const blob = await response.blob();
-
-        // Create a local URL for the blob and trigger download
-        const link = document.createElement('a');
-        link.href = window.URL.createObjectURL(blob);
-        link.download = 'My_Resume.pdf'; // Name of the file when downloaded
-        document.body.appendChild(link); // Append to body to ensure click works
-        link.click();
-
-        // Clean up the local URL
-        window.URL.revokeObjectURL(link.href);
-        document.body.removeChild(link); // Remove from body after download
-      } catch (error) {
-        console.error('Error downloading resume:', error);
-      }
-    } else {
-      console.error('No resume URL available.');
-    }
+const Resume = () => {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = LOCAL_RESUME;
+    link.download = 'Mayur_Garud_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
-  return(
-  <div className="Resume-content">
-    <div className="resume-container">
-      <h2 className='resume-title'> My Resume</h2>
-      <div className="iframe-container">
-        <iframe
-          src={downloadLink}
-          title="Resume Preview"
-          width="100%"
-          height="600px"
-          className="resume-iframe"
-        ></iframe>
-      </div> 
-    </div>
-     
-     <button onClick={handleDownload} className="download-button">
+
+  return (
+    <div className="Resume-content">
+      <div className="resume-container">
+        <h2 className="resume-title">My Resume</h2>
+        <p className="resume-meta">
+          Mayur Dilip Garud · Software Engineer · Updated Nov 2026
+        </p>
+        <div className="iframe-container">
+          <iframe
+            src={LOCAL_RESUME}
+            title="Resume Preview"
+            width="100%"
+            height="600px"
+            className="resume-iframe"
+          />
+        </div>
+      </div>
+
+      <button onClick={handleDownload} className="download-button">
         Download Resume
       </button>
-    <h1> Skills...</h1>
-   <div className='skill_container'>
-       <SkillsTabs/>
-      {/* <div className='skills'>
-        <div className="skill-item"><img src={Images.Java}/><p>Java</p></div>
-        <div className="skill-item"><img src={Images.python}/><p>Python</p></div>
-        <div className="skill-item"><img src={Images.Mysql}/><p>MySQL</p></div>
-        <div className="skill-item"><img src={Images.reactLogo}/><p>React.JS</p></div>
-        <div className="skill-item"><img src={Images.springboot}/><p>Spring Boot</p></div>
-        <div className="skill-item"><img src={Images.git}/><p>GIT</p></div>
-        <div className="skill-item"><img src={Images.github}/><p>GitHub</p></div>
-        <div className="skill-item"><img src={Images.JavaScript}/><p>JavaScript</p></div>
-        <div className="skill-item"><img src={Images.html}/><p>HTML</p></div>
-        <div className="skill-item"><img src={Images.firebase}/><p>Firebase</p></div>
-        <div className="skill-item"><img src={Images.gcp}/><p>Google Cloud Platform</p></div>
-        <div className="skill-item"><img src={Images.docker}/><p>Docker Container</p></div>
-        <div className="skill-item"> <img src={Images.api}/><p>Rest API</p></div>
-        <div className="skill-item"><img src={Images.swagger}/><p>swagger Documentation API</p></div>
-        <div className="skill-item"><img src={Images.postman}/><p>Postman API</p></div>
-      </div> */}
-    
+
+      <h1>Skills</h1>
+      <div className="skill_container">
+        <SkillsTabs />
+      </div>
     </div>
-    
-  </div>
-);
+  );
 };
 
 export default Resume;

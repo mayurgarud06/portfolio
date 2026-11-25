@@ -1,4 +1,7 @@
 import Blog from './blogImages/taskManagement.jpg';
-export default{
-    Blog,
+
+const blogImages = {
+  Blog,
 };
+
+export default blogImages;

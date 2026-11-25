@@ -13,7 +13,7 @@ const AddBlog = ({ addBlog }) => {
     const [description, setDescription] = useState('');
     const [content, setContent] = useState('');
     const [image, setImage] = useState(null); // State to handle uploaded image
-    const [isUploading, setIsUploading] = useState(false); // To show upload progress
+    const [, setIsUploading] = useState(false);
     const navigate = useNavigate();
 
     const toolbarOptions = [

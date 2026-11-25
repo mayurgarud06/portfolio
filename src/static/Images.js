@@ -26,9 +26,12 @@ import swagger from './png/swagger.png';
 import postman from './png/postman.png';
 import workInProgress from './working.webp';
 import googlecloudLogo from './googlecloud.png';
-import firebase from './png/firebase.png'
+import firebase from './png/firebase.png';
+import redis from './png/redis.png';
+import kafka from './png/kafka.png';
+import microService from './png/microservice.png';
 
-export default {
+const Images = {
   profileLogo,
   contactLogo,
   locationLogo,
@@ -56,5 +59,10 @@ export default {
   postman,
   workInProgress,
   googlecloudLogo,
-  firebase
+  firebase,
+  redis,
+  kafka,
+  microService
 };
+
+export default Images;

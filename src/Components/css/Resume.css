@@ -1,195 +1,162 @@
-   /* Resume.css */
-   .Resume-content {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     min-height: 100vh;
-     background-color: #282c34;
-     padding-top: 50px;
-   }
-
-   .resume-container {
-     text-align: center;
-     background: #373c47;
-     padding: 10px;
-     border-radius: 12px;
-     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-     max-width: 1200px;
-     width: 100%;
-   }
-
-   .resume-title {
-     font-size: 2rem;
-     margin-bottom: 20px;
-
-   }
-
-   .iframe-container {
-     display: flex;
-     justify-content: center;
-     margin-bottom: 30px;
-   }
-
-   .resume-iframe {
-     width: 100%;
-     height: 1000px;
-     border: none;
-     border-radius: 8px;
-   }
-
-   .download-button {
-     background-color: #4CAF50;
-     color: white;
-     font-weight: bold;
-     padding: 20px 40px;
-     margin: 25px;
-     font-size: 18px;
-     border: none;
-     border-radius: 8px;
-     cursor: pointer;
-     transition: background-color 0.3s ease;
-   }
-
-   .download-button:hover {
-     background-color: #4ea553;
-   }
-
-   /* skills section css */
-   .skill_container {
-     width: 100%;
-     display: flex;
-     justify-content: center;
-     padding: 40px 0;
-     padding-top: 5px;
-     border-radius: 12px;
-     background-color: #373c47;
-   }
-
-   .skills {
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-     gap: 30px;
-     margin: 15px;
-     /*Spacebetweeneachskillitem*/
-     max-width: 1200px;
-     /*Limitsthemaximumwidth*/
-   }
-
-   .skills div {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     width: 150px;
-     /*Fixedwidthforconsistentalignment*/height: 150px;
-     /*Fixedheightforconsistentalignment*/background-color: #525968;
-     /*Backgroundcolorforeachskillbox*/border-radius: 12px;
-     /*Roundedcorners*/box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-     /*Subtleshadowfordepth*/font-size: 16px;
-     /*Fontsizeforthetext*/font-weight: bold;
-     color: #ccc;
-     /*Textcolor*/text-align: center;
-     transition: transform 0.3s ease, box-shadow 0.2s ease;
-     -webkit-transition: transform 0.3s ease, box-shadow 0.2s ease;
-     -moz-transition: transform 0.3s ease, box-shadow 0.2s ease;
-     -ms-transition: transform 0.3s ease, box-shadow 0.2s ease;
-     -o-transition: transform 0.3s ease, box-shadow 0.2s ease;
+.Resume-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-height: auto;
+  background-color: transparent;
+  padding-top: 0;
+  gap: 8px;
 }
 
-   .skills div:hover {
-     transform: translateY(-10px);
-     /*Slightmovementonhover*/
-     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-     /*Enhancedshadowonhover*/
-     background-color: #8d8bb6;
-     color: #030303;
-   }
+.resume-container {
+  text-align: left;
+  background: rgba(8, 9, 12, 0.35);
+  padding: 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+  max-width: 1200px;
+  width: 100%;
+}
 
-   .skill-item {
-     display: flex;
-     flex-direction: column;
-     /* Stack the image and the label vertically */
-     align-items: center;
-     /* Center the items horizontally */
-     justify-content: center;
-     /* Center the items vertically */
-     text-align: center;
-     /* Center the text within the  element */
-     padding: 10px;
-   }
+.resume-title {
+  font-size: 1.75rem;
+  margin: 0 0 8px;
+}
 
-   .skill-item img {
-     width: 80px;
-     /* Adjust size as needed */
-     height: 80px;
-     /* Adjust size as needed */
-     margin-bottom: 10px;
-     /* Space between the image and the label */
-     display: block;
-     margin: 0 auto;
-     /* Center the image */
-     image-rendering: auto;
-   }
+.resume-meta {
+  margin: 0 0 16px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
 
-   .skill-item p {
-     margin: 0;
-     font-size: 14px;
-     /* Adjust font size as needed */
-     color: #ccc;
-     /* Change text color if needed */
-   }
+.iframe-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
 
-   /* Media Queries */
+.resume-iframe {
+  width: 100%;
+  height: 900px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: #fff;
+}
 
-/* For tablets and smaller laptops (up to 1024px) */
+.download-button {
+  align-self: flex-start;
+  background-color: var(--accent);
+  color: #1a1408;
+  font-weight: 700;
+  font-family: var(--font-body);
+  padding: 14px 28px;
+  margin: 12px 0 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.download-button:hover {
+  background-color: var(--accent-strong);
+  transform: translateY(-1px);
+}
+
+.Resume-content > h1 {
+  margin: 12px 0 16px;
+}
+
+.skill_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 24px;
+  border-radius: var(--radius-md);
+  background-color: transparent;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin: 12px 0;
+  max-width: 1200px;
+}
+
+.skills div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  background-color: rgba(8, 9, 12, 0.4);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+  transition: transform var(--transition), border-color var(--transition), background-color var(--transition);
+}
+
+.skills div:hover {
+  transform: translateY(-6px);
+  border-color: rgba(232, 184, 74, 0.4);
+  background-color: var(--accent-soft);
+  color: var(--text-primary);
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.skill-item img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 10px;
+  display: block;
+  image-rendering: auto;
+}
+
+.skill-item p {
+  margin: 0;
+  font-size: 13px;
+  color: inherit;
+}
+
 @media (max-width: 1024px) {
-  .resume-container {
-    padding: 20px;
-    width: 90%; /* Adjust width for smaller screens */
-  }
-
   .resume-iframe {
-    height: 800px; /* Reduce iframe height */
+    height: 720px;
   }
 }
 
-/* For tablets and mobile devices (up to 768px) */
 @media (max-width: 768px) {
-  .Resume-content {
-    padding: 10px;
-  }
   .resume-container {
-    /* padding: 15px; */
-    width: 95%; /* Further adjust width */
+    padding: 14px;
   }
 
   .resume-iframe {
-    height: 600px; /* Further reduce iframe height */
+    height: 560px;
   }
 
   .download-button {
-    padding: 15px 30px; /* Adjust button padding */
-    font-size: 16px; /* Adjust font size */
+    width: 100%;
+    text-align: center;
   }
 }
 
-/* For small mobile devices (up to 480px) */
 @media (max-width: 480px) {
-  .Resume-content {
-    padding: 10px;
-  }
-  .resume-container {
-    padding: 10px;
-    width: 100%; /* Full width for small screens */
-  }
-
   .resume-iframe {
-    height: 400px; /* Reduce iframe height for small screens */
-  }
-
-  .download-button {
-    padding: 10px 20px; /* Adjust button padding */
-    font-size: 14px; /* Adjust font size */
+    height: 420px;
   }
 }
